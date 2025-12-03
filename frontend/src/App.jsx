@@ -5,7 +5,7 @@ function App() {
   const [msg,setMsg]=useState('')
   const checkBackend = async () => {
   try {
-    const res = await axios.get("http://localhost:8000/health");
+    const res = await axios.get("https://rag-chatbot-gia3.onrender.com/health");
     console.log("Response:", res.data);
     setMsg(JSON.stringify(res.data.status))
   } catch (error) {

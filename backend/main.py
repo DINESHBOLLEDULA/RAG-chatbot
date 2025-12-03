@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 app=FastAPI()
-app.add_middleware(CORSMiddleware,allow_origins=["http://localhost:5173"])
+app.add_middleware(CORSMiddleware,allow_origins=["http://localhost:5173",'https://rag-chatbot-gia3.onrender.com'])
 
 @app.get("/health")
 def health():
