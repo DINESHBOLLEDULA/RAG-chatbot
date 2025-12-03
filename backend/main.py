@@ -11,7 +11,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+# app.add_middleware(CORSMiddleware,allow_origins=['http://localhost:5173'])
 
 @app.get("/health")
 def health():
     return {'status':'backend connected'}
+
+@app.get("/upload-pdf")
+async def upload_pdf():
+    return {'status':'pdf uploaded'}
